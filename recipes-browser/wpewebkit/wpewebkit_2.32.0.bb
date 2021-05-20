@@ -11,7 +11,7 @@ SRC_URI = "\
 SRC_URI[sha256sum] = "6cfb18af9a180eeffffcaf34fea68d867ee59f633d811ced92bbead2d184b6ea"
 
 DEPENDS += " libwpe"
-RCONFLICTS_${PN} = "libwpe (< 1.4) wpebackend-fdo (< 1.6)"
+RCONFLICTS_${PN} = "libwpe (< 1.10) wpebackend-fdo (< 1.8)"
 
 PACKAGECONFIG_append = " ${@bb.utils.contains('DISTRO_FEATURES', 'systemd', 'systemd', '' ,d)}  unified-builds  service-worker"
 
@@ -28,3 +28,4 @@ PACKAGECONFIG[webxr] = "-DENABLE_WEBXR=ON,-DENABLE_WEBXR=OFF,"
 
 FILES_${PN}-qtwpe-qml-plugin = "${libdir}/qt5/qml/org/wpewebkit/qtwpe/*"
 
+DEFAULT_PREFERENCE = "-1"
