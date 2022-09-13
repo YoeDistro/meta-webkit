@@ -13,11 +13,11 @@ DEPENDS += " libwpe"
 RCONFLICTS:${PN} = "libwpe (< 1.10) wpebackend-fdo (< 1.10)"
 
 SRC_URI:class-devupstream = "\
-    git://git.webkit.org/WebKit.git;branch=master \
+    git://github.com/WebKit/WebKit.git;protocol=https;branch=main \
     file://0002-libyuv-gcc-issue.patch \
 "
-# WPE 2.36.X branch was forked from the main branch in this commit
-SRCREV:class-devupstream = "b3f12a91b11b34b71aa4ec64c1806616b45bd877"
+# Can be used for branches for the next releases
+#SRCREV:class-devupstream = "abcd1234"
 
 # Needed from 2.36
 PACKAGECONFIG[journald] = "-DENABLE_JOURNALD_LOG=ON,-DENABLE_JOURNALD_LOG=OFF,"
