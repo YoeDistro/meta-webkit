@@ -10,6 +10,7 @@ Upstream-Status: Pending
  linux-user/strace.c | 2 ++
  1 file changed, 2 insertions(+)
 
+Signed-off-by: Pablo Saavedra <psaavedra@igalia.com>
 diff --git a/linux-user/strace.c b/linux-user/strace.c
 index 3b744ccd4..12230b10d 100644
 --- a/linux-user/strace.c
