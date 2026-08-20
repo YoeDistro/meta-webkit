@@ -21,7 +21,7 @@ PV = "${BPV}"
 
 RUBY_GEM_NAME = "highline"
 RUBY_BUILD_GEMS = "${RUBY_GEM_NAME}.gemspec"
-RUBY_INSTALL_GEMS ?= "${RUBY_GEM_NAME}-${PV}.gem"
+RUBY_INSTALL_GEMS = "${RUBY_GEM_NAME}-${PV}.gem"
 
 SRC_URI = " \
     git://github.com/JEG2/highline.git;protocol=https;branch=master;destsuffix=${BP} \
